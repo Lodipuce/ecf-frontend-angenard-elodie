@@ -53,16 +53,19 @@ table {
 
 * {
     box-sizing: border-box;
-    font-family: Barlow, "Sans-serif";
+    font-family: "Barlow Condensed", "Sans-serif";
     color: #fff;
 }
 
 body {
+    height: 100vh;
     background-image: url('../assets/home/background-home-mobile.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,14 +76,19 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-right: 15%;
 }
 
 .hidden {
     display: none;
 }
 
+main {
+    width: 100%;
+}
+
 main section {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -112,7 +120,147 @@ main section div:last-child {
 .button {
     color: #0b0f1a;
     border-radius: 50%;
+    font-family: Bellefair, Serif;
     font-size: 18px;
     padding: 15%;
-    margin-top: 25%;
+    margin-top: 30%;
+    margin-bottom: 40%;
+    border: none;
+}
+
+
+/* Responsive */
+
+    /* tablet */
+    @media screen and (min-width: 375px) and (max-width: 768px) {
+        body {
+            background-image: url('../assets/home/background-home-tablet.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav.hidden {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            color: #fff;
+            margin-right: 7%;
+        }
+
+        .burger_div {
+            display: none;
+        }
+
+        .header_navbar {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .header_navbar li { 
+            margin-left: 3%;
+        }
+
+        .header_navbar a {
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 144px;
+            margin: 15px;
+        }
+
+        main section div:first-child {
+            font-size: 28px;
+        }
+
+        main section div:last-child {
+            font-size: 16px;
+        }
+
+        .button {
+            font-size: 32px;
+        }
+
+        main section div {
+            width: 100%;
+        }
+        
+    }
+
+        /* desktop */
+    @media screen and (min-width: 769px) {
+        body {
+            background-image: url('../assets/home/background-home-desktop.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        hr.hidden {
+            display: flex;
+        }
+
+        nav.hidden {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-right: 10%;
+        }
+
+        .burger_div {
+            display: none;
+        }
+
+        .header_navbar {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .header_navbar li { 
+            margin-left: 5%;
+        }
+
+        .header_navbar a {
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main section {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        main section div {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+            margin-left: 0;
+            font-size: 144px;
+        }
+
+        main section div:first-child {
+            font-size: 28px;
+        }
+
+        main section div:last-child {
+            font-size: 18px;
+        }
+
+        .button {
+            font-size: 32px;
+        }
 }
