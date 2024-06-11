@@ -54,7 +54,7 @@ table {
 * {
     box-sizing: border-box;
     font-family: "Barlow Condensed", "Sans-serif";
-    color: #fff;
+    color: #d0d6f9;
 }
 
 body {
@@ -69,7 +69,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5%;
+    align-items: center;
+    margin: 10% 5%;
 }
 
 .burger_div {
@@ -83,12 +84,22 @@ header {
     display: none;
 }
 
+.active_page {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 40px;
+}
+
+.header_navbar {
+    padding-top: 40px;
+}
+
 main {
     width: 100%;
 }
 
 main section {
     width: 80%;
+    height: 710px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -103,7 +114,7 @@ main section div {
     margin-top: 10%;
 }
 
-main section div:first-child {
+.div_text > p:nth-child(1) {
     font-size: 16px;
 }
 
@@ -113,19 +124,28 @@ h1 {
     margin: 10%;
 }
 
-main section div:last-child {
+.div_text > p:nth-child(3) {
     font-size: 15px;
 }
 
 .button {
     color: #0b0f1a;
+    background-color: #d0d6f9;
     border-radius: 50%;
     font-family: Bellefair, Serif;
     font-size: 18px;
-    padding: 15%;
-    margin-top: 30%;
-    margin-bottom: 40%;
+    margin: auto;
     border: none;
+    width: 144px;
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 0px 85px rgba(208,214,249,0.15);
 }
 
 
@@ -146,11 +166,15 @@ main section div:last-child {
             align-items: center;
             width: 100%;
             color: #fff;
-            margin-right: 7%;
+            padding-right: 7%;
         }
 
         .burger_div {
             display: none;
+        }
+
+        header {
+            margin: 0 5% 5% 5%;
         }
 
         .header_navbar {
@@ -174,16 +198,18 @@ main section div:last-child {
             margin: 15px;
         }
 
-        main section div:first-child {
+        .div_text > p:nth-child(1) {
             font-size: 28px;
         }
 
-        main section div:last-child {
+        .div_text > p:nth-child(3) {
             font-size: 16px;
         }
 
         .button {
             font-size: 32px;
+            width: 272px;
+            height: 272px;
         }
 
         main section div {
@@ -198,10 +224,15 @@ main section div:last-child {
             background-image: url('../assets/home/background-home-desktop.jpg');
             background-repeat: no-repeat;
             background-size: cover;
+            margin-left: 50px;
         }
 
         hr.hidden {
-            display: flex;
+            display: block;
+            flex-grow: 1;
+            border: none;
+            border-top: 0.25px solid #979797;
+            margin: 0;
         }
 
         nav.hidden {
@@ -210,11 +241,19 @@ main section div:last-child {
             justify-content: center;
             align-items: center;
             color: #fff;
-            margin-right: 10%;
+            padding: 2% 10%;
+            padding-left: 0px;
+            height: 100px;
+            width: 60%;
+            background-color: rgba(11,13,23,0.8);
         }
 
         .burger_div {
             display: none;
+        }
+
+        header {
+            margin: 0;
         }
 
         .header_navbar {
@@ -233,11 +272,17 @@ main section div:last-child {
             font-size: 16px;
         }
 
+        main {
+            height: fit-content;
+        }
+
         main section {
             width: 90%;
+            height: 630px;
             display: flex;
             flex-direction: row;
-            align-items: baseline;
+            align-items: flex-end;
+            margin-top: 0;
         }
 
         main section div {
@@ -248,19 +293,25 @@ main section div:last-child {
         }
 
         h1 {
-            margin-left: 0;
+            margin: 5% 0;
             font-size: 144px;
         }
 
-        main section div:first-child {
+        .div_text {
+            margin-top: 0;
+        }
+
+        .div_text > p:nth-child(1) {
             font-size: 28px;
         }
 
-        main section div:last-child {
+        .div_text > p:nth-child(3) {
             font-size: 18px;
         }
 
         .button {
             font-size: 32px;
+            width: 272px;
+            height: 272px;
         }
 }
